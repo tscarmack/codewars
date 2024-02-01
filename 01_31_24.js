@@ -16,3 +16,12 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
       return false
     }
   };
+
+
+
+  // refactoring...
+
+  const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    // TODO
+    return mpg*fuelLeft >= distanceToPump
+  };
