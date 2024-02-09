@@ -29,20 +29,18 @@
 // If a or b are nil (or null or None, depending on the language), the problem doesn't make sense so return false.
 
 
-function comp(array1, array2){
-  //your code here
-  if (array1.length !== array2.length){
+function comp(array1, array2) {
+  
+  if(array1 == null || array2 == null) {
     return false
   }
-  
-  for(let i=0; i<array1.length; i++){
-    
-    let square = array1[i] **2
-    
-    if(!array2.includes(square)){
+  array1.sort((a, b) => a-b)
+  array2.sort((a, b) => a-b)
+
+  for(let i = 0; i < array1.length; i++) {
+    if(array2[i] !== array1[i] * array1[i]) {
       return false
     }
-    
   }
   return true
 }
