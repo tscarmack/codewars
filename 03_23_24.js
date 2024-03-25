@@ -36,4 +36,6 @@ const sequenceSum = (begin, end, step) => {
     else{
       
   }
-};
+    };
+
+    // not finished yet
